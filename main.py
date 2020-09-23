@@ -46,14 +46,11 @@ def request_data():
     return user
 
 def main():
-    """
-    Осуществляет взаимодействие с пользователем, обрабатывает пользовательский ввод
-    """
+
     session = connect_db()
     user = request_data()
     session.add(user)
     session.commit()
-    print("Твои данные сохранены в базе данных. Спасибо!")
 
 
 if __name__ == "__main__":
